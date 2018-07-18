@@ -1,0 +1,41 @@
+<body>
+<div class="container">
+    <header>
+        <h1 class="text-center">List Of Best Restaureants</h1>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            {{#each restaurants}}
+                {{> restaurant}}
+            {{/each}}
+        </div>
+    </div>
+</div>
+</body>
+
+<template name="restaurant">
+
+    <div class="col-md-4" style="margin: 3%;">
+            <span>
+                <img src=" {{defaultHeaderpath}}" alt="{{ResturantName}}">
+            </span>
+        <!--restaurant logo commented-->
+        <!--<span><img src=" {{ResturantLogo}}" alt="{{ResturantName}}"></span>-->
+        <div class="row">
+            <ul class="col-md-6">
+                <li>Name:<span>{{ResturantName}}</span></li>
+                <li><span>{{cusines_name_alllist}}</span></li>
+                <li>Min Order:<span>{{minimum_order_value}}</span></li>
+            </ul>
+            <ul class="col-md-6">
+                <li>Total Feedback:<span>{{TotalFeedback}}</span></li>
+                <li>Avg Feedback:<span>{{AVGFeedback}}</span></li>
+                <li>Distance:<span>{{milesDistance}}</span></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+</template>
